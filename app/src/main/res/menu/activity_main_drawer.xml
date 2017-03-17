@@ -1,36 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_camera"
+            android:id="@+id/home"
             android:icon="@drawable/ic_menu_camera"
-            android:title="Office" />
-        <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="Employee" />
-        <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="Customer" />
-        <item
-            android:id="@+id/nav_manage"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="Product" />
+            android:title="Home" />
     </group>
+    <item android:title="List Data">
+        <menu>
+            <item
+                android:id="@+id/l_office"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Office" />
+            <item
+                android:id="@+id/l_employee"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Employee" />
+            <item
+                android:id="@+id/l_customer"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Customer" />
+            <item
+                android:id="@+id/l_product"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Product" />
+        </menu>
+    </item>
 
-    <!--<item android:title="Communicate">-->
-        <!--<menu>-->
-            <!--<item-->
-                <!--android:id="@+id/nav_share"-->
-                <!--android:icon="@drawable/ic_menu_share"-->
-                <!--android:title="Share" />-->
-            <!--<item-->
-                <!--android:id="@+id/nav_send"-->
-                <!--android:icon="@drawable/ic_menu_send"-->
-                <!--android:title="Send" />-->
-        <!--</menu>-->
-    <!--</item>-->
+    <item android:title="Proses Input">
+        <menu>
+            <item
+                android:id="@+id/i_office"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Office" />
+            <item
+                android:id="@+id/i_employee"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Employee" />
+            <item
+                android:id="@+id/i_customer"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Customer" />
+            <item
+                android:id="@+id/i_product"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Product" />
+        </menu>
+    </item>
 
 </menu>

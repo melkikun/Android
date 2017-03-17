@@ -17,6 +17,7 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.example.it01.android.entities.Office;
+import com.example.it01.android.fragment.HomeFragment;
 import com.example.it01.android.fragment.OfficeFragment;
 import com.example.it01.android.presenter.EmployeePresenter;
 import com.example.it01.android.services.OfficeService;
@@ -32,21 +33,17 @@ public class MainActivity extends AppCompatActivity
     private OfficeService officeService;
     @BindView(R.id.toolbar)
     Toolbar toolbar;
+    private FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
         setSupportActionBar(toolbar);
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
-
+        toolbar.setTitle("Main Menu");
+        HomeFragment hf = new HomeFragment();
+        ft.replace(R.id.frame, hf);
+        ft.commit();
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -93,19 +90,25 @@ public class MainActivity extends AppCompatActivity
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
-        int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
+        int id = item.getItemId();
+        if(id == R.id.home){
+            toolbar.setTitle("Main Menu");
+            HomeFragment hf = new HomeFragment();
+            ft.replace(R.id.frame, hf);
+            ft.commit();
+        }
+        if (id == R.id.l_office) {
             toolbar.setTitle("Detail Office");
             OfficeFragment of = new OfficeFragment();
-            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+
             ft.replace(R.id.frame, of);
             ft.commit();
-        } else if (id == R.id.nav_gallery) {
+        } else if (id == R.id.l_employee) {
 
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.l_customer) {
 
-        } else if (id == R.id.nav_manage) {
+        } else if (id == R.id.l_product) {
 
         }
 
