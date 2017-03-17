@@ -33,13 +33,13 @@ public class MainActivity extends AppCompatActivity
     private OfficeService officeService;
     @BindView(R.id.toolbar)
     Toolbar toolbar;
-    private FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
         setSupportActionBar(toolbar);
+        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
         toolbar.setTitle("Main Menu");
         HomeFragment hf = new HomeFragment();
         ft.replace(R.id.frame, hf);
@@ -90,15 +90,17 @@ public class MainActivity extends AppCompatActivity
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
-
+        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
         int id = item.getItemId();
         if(id == R.id.home){
+
             toolbar.setTitle("Main Menu");
             HomeFragment hf = new HomeFragment();
             ft.replace(R.id.frame, hf);
             ft.commit();
         }
         if (id == R.id.l_office) {
+
             toolbar.setTitle("Detail Office");
             OfficeFragment of = new OfficeFragment();
 
