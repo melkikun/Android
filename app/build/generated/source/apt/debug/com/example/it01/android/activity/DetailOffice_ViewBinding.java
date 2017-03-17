@@ -3,6 +3,8 @@ package com.example.it01.android.activity;
 
 import android.support.annotation.CallSuper;
 import android.support.annotation.UiThread;
+import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.TextView;
 import butterknife.Unbinder;
@@ -23,7 +25,9 @@ public class DetailOffice_ViewBinding implements Unbinder {
   public DetailOffice_ViewBinding(DetailOffice target, View source) {
     this.target = target;
 
+    target.toolbar = Utils.findRequiredViewAsType(source, R.id.toolbar, "field 'toolbar'", Toolbar.class);
     target.textView = Utils.findRequiredViewAsType(source, R.id.textView2, "field 'textView'", TextView.class);
+    target.recyclerView = Utils.findRequiredViewAsType(source, R.id.rv, "field 'recyclerView'", RecyclerView.class);
   }
 
   @Override
@@ -33,6 +37,8 @@ public class DetailOffice_ViewBinding implements Unbinder {
     if (target == null) throw new IllegalStateException("Bindings already cleared.");
     this.target = null;
 
+    target.toolbar = null;
     target.textView = null;
+    target.recyclerView = null;
   }
 }

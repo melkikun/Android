@@ -51,7 +51,7 @@ public class OfficeFragment extends Fragment implements EmployeePresenter{
         recyclerView.addOnItemTouchListener(new RvClickListerner(getContext(), recyclerView, new RvClickListerner.ClickListerner() {
             @Override
             public void onClick(View view, int position) {
-//                Toast.makeText(getActivity().getApplicationContext(), office.get(position).getOfficeCode().toString(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity().getApplicationContext(), office.get(position).getOfficeCode().toString(), Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(view.getContext(), DetailOffice.class);
                 intent.putExtra("id", office.get(position).getOfficeCode());
                 startActivity(intent);

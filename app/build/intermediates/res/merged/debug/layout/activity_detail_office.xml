@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.example.it01.android.activity.DetailOffice">
-
+    <include layout="@layout/toolbar" />
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
@@ -13,6 +13,10 @@
         android:text="TextView"
         tools:layout_editor_absoluteX="55dp"
         tools:layout_editor_absoluteY="47dp"
-
         />
-</android.support.constraint.ConstraintLayout>
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rv"
+        ></android.support.v7.widget.RecyclerView>
+</LinearLayout>

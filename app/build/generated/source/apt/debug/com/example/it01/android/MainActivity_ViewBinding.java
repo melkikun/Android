@@ -3,6 +3,7 @@ package com.example.it01.android;
 
 import android.support.annotation.CallSuper;
 import android.support.annotation.UiThread;
+import android.support.design.widget.NavigationView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import butterknife.Unbinder;
@@ -23,6 +24,7 @@ public class MainActivity_ViewBinding implements Unbinder {
     this.target = target;
 
     target.toolbar = Utils.findRequiredViewAsType(source, R.id.toolbar, "field 'toolbar'", Toolbar.class);
+    target.navigationView = Utils.findRequiredViewAsType(source, R.id.nav_view, "field 'navigationView'", NavigationView.class);
   }
 
   @Override
@@ -33,5 +35,6 @@ public class MainActivity_ViewBinding implements Unbinder {
     this.target = null;
 
     target.toolbar = null;
+    target.navigationView = null;
   }
 }

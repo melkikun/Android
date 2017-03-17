@@ -1,7 +1,11 @@
 package com.example.it01.android.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,8 +13,12 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.example.it01.android.MainActivity;
 import com.example.it01.android.R;
+import com.example.it01.android.fragment.HomeFragment;
+import com.example.it01.android.fragment.OfficeFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -52,7 +60,7 @@ public class HomeAdapter extends BaseAdapter{
     }
 
     @Override
-    public View getView(int i, View view, ViewGroup viewGroup) {
+    public View getView(final int i, View view, ViewGroup viewGroup) {
         view = layoutInflater.inflate(R.layout.list_home_adapter, null);
         Holder holder = new Holder(view);
         for(int j = 0; j < integers.size(); j++){
@@ -63,6 +71,23 @@ public class HomeAdapter extends BaseAdapter{
         }
         holder.title.setText(judul.get(i).toString());
         holder.image.setImageResource(integers.get(i));
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext().getApplicationContext(), MainActivity.class);
+                switch (i){
+                    case 0:
+                        Fragment fragment =     new OfficeFragment();
+                        FragmentManager fragmentManager = ((MainActivity)context).getSupportFragmentManager();
+                        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                        fragmentTransaction.replace(R.id.frame, fragment);
+                        fragmentTransaction.commit();
+                        break;
+                }
+
+
+            }
+        });
         return view;
     }
 
