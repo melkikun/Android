@@ -14,10 +14,10 @@ import java.lang.IllegalStateException;
 import java.lang.Override;
 
 public class HomeAdapter$Holder_ViewBinding implements Unbinder {
-  private HomeAdapter.Holder target;
+  private MenuAdapter.Holder target;
 
   @UiThread
-  public HomeAdapter$Holder_ViewBinding(HomeAdapter.Holder target, View source) {
+  public HomeAdapter$Holder_ViewBinding(MenuAdapter.Holder target, View source) {
     this.target = target;
 
     target.image = Utils.findRequiredViewAsType(source, R.id.image, "field 'image'", ImageView.class);
@@ -28,7 +28,7 @@ public class HomeAdapter$Holder_ViewBinding implements Unbinder {
   @Override
   @CallSuper
   public void unbind() {
-    HomeAdapter.Holder target = this.target;
+    MenuAdapter.Holder target = this.target;
     if (target == null) throw new IllegalStateException("Bindings already cleared.");
     this.target = null;
 

@@ -29,6 +29,11 @@
             </intent-filter>
         </activity>
         <activity android:name="com.example.it01.android.activity.DetailOffice" />
+        <activity android:name="com.example.it01.android.activity.ListOffice" />
+        <activity android:name="com.example.it01.android.activity.AddOffice" />
+        <activity android:name="com.example.it01.android.activity.EditOffice" />
+        <activity android:name="com.example.it01.android.activity.DeleteOffice" />
+        <activity android:name="com.example.it01.android.activity.DetailListOffice" />
     </application>
 
 </manifest>

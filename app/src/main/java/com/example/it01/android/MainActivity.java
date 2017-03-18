@@ -1,14 +1,7 @@
 package com.example.it01.android;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.provider.SyncStateContract;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
-import android.util.Log;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -17,17 +10,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
 
-import com.example.it01.android.entities.Office;
-import com.example.it01.android.fragment.HomeFragment;
-import com.example.it01.android.fragment.InputOfficeFragment;
-import com.example.it01.android.fragment.OfficeFragment;
-import com.example.it01.android.presenter.EmployeePresenter;
+import com.example.it01.android.fragment.CustomerFragmentMenu;
+import com.example.it01.android.fragment.EmployeeFragmentMenu;
+import com.example.it01.android.fragment.HomeFragmentMenu;
+import com.example.it01.android.fragment.OfficeFragmentMenu;
+import com.example.it01.android.fragment.ProductFragmentMenu;
 import com.example.it01.android.services.OfficeService;
-import com.example.it01.android.services.impl.OfficeServiceImpl;
-
-import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -47,7 +36,7 @@ public class MainActivity extends AppCompatActivity
         setSupportActionBar(toolbar);
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
         toolbar.setTitle("Main Menu");
-        HomeFragment hf = new HomeFragment();
+        HomeFragmentMenu hf = new HomeFragmentMenu();
         ft.replace(R.id.frame, hf);
         ft.commit();
         navigationView.getMenu().getItem(0).setChecked(true);
@@ -67,7 +56,7 @@ public class MainActivity extends AppCompatActivity
         }else{
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             toolbar.setTitle("Main Menu");
-            HomeFragment hf = new HomeFragment();
+            HomeFragmentMenu hf = new HomeFragmentMenu();
             ft.replace(R.id.frame, hf);
             ft.commit();
         }
@@ -98,40 +87,41 @@ public class MainActivity extends AppCompatActivity
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-        int id = item.getItemId();
-        if(id == R.id.home){
-            toolbar.setTitle("Main Menu");
-            HomeFragment hf = new HomeFragment();
-            ft.replace(R.id.frame, hf);
-            ft.addToBackStack("satu");
-            ft.commit();
-            navigationView.getMenu().getItem(0).setChecked(true);
-            navigationView.setCheckedItem(id);
+        switch (item.getItemId()){
+            case R.id.home:
+                HomeFragmentMenu homeFragmentMenu = new HomeFragmentMenu();
+                ft.replace(R.id.frame, homeFragmentMenu);
+                ft.addToBackStack("0");
+                ft.commit();
+                break;
+            case R.id.office:
+                OfficeFragmentMenu officeFragmentMenu = new OfficeFragmentMenu();
+                ft.replace(R.id.frame, officeFragmentMenu);
+                ft.addToBackStack("1");
+                ft.commit();
+                break;
+            case R.id.employee:
+                EmployeeFragmentMenu employeeFragmentMenu = new EmployeeFragmentMenu();
+                ft.replace(R.id.frame, employeeFragmentMenu);
+                ft.addToBackStack("2");
+                ft.commit();
+                break;
+            case R.id.customer:
+                CustomerFragmentMenu customerFragmentMenu = new CustomerFragmentMenu();
+                ft.replace(R.id.frame, customerFragmentMenu);
+                ft.addToBackStack("3");
+                ft.commit();
+                break;
+            case R.id.product:
+                ProductFragmentMenu productFragmentMenu = new ProductFragmentMenu();
+                ft.replace(R.id.frame, productFragmentMenu);
+                ft.addToBackStack("4");
+                ft.commit();
+                break;
+            default:
+                break;
         }
-        if (id == R.id.l_office) {
-            toolbar.setTitle("Detail Office");
-            OfficeFragment of = new OfficeFragment();
-            ft.replace(R.id.frame, of);
-            ft.addToBackStack("dua");
-            ft.commit();
-            navigationView.getMenu().getItem(1).setChecked(true);
-            navigationView.setCheckedItem(id);
-        } else if (id == R.id.l_employee) {
-
-        } else if (id == R.id.l_customer) {
-
-        } else if (id == R.id.l_product) {
-
-        }else if(id == R.id.i_office){
-            toolbar.setTitle("Input Office Baru");
-            InputOfficeFragment iof = new InputOfficeFragment();
-            ft.replace(R.id.frame, iof);
-            ft.addToBackStack("input office");
-            ft.commit();
-        }
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;

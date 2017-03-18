@@ -22,7 +22,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.DetailOffice"></activity>
+        <activity android:name=".activity.DetailOffice" />
+        <activity android:name=".activity.ListOffice" />
+        <activity android:name=".activity.AddOffice" />
+        <activity android:name=".activity.EditOffice" />
+        <activity android:name=".activity.DeleteOffice" />
+        <activity android:name=".activity.DetailListOffice"></activity>
     </application>
 
 </manifest>

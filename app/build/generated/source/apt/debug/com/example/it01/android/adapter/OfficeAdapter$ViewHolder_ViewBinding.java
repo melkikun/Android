@@ -12,10 +12,10 @@ import java.lang.IllegalStateException;
 import java.lang.Override;
 
 public class OfficeAdapter$ViewHolder_ViewBinding implements Unbinder {
-  private OfficeAdapter.ViewHolder target;
+  private ListOfficeAdapter.ViewHolder target;
 
   @UiThread
-  public OfficeAdapter$ViewHolder_ViewBinding(OfficeAdapter.ViewHolder target, View source) {
+  public OfficeAdapter$ViewHolder_ViewBinding(ListOfficeAdapter.ViewHolder target, View source) {
     this.target = target;
 
     target.city = Utils.findRequiredViewAsType(source, R.id.city, "field 'city'", TextView.class);
@@ -26,7 +26,7 @@ public class OfficeAdapter$ViewHolder_ViewBinding implements Unbinder {
   @Override
   @CallSuper
   public void unbind() {
-    OfficeAdapter.ViewHolder target = this.target;
+    ListOfficeAdapter.ViewHolder target = this.target;
     if (target == null) throw new IllegalStateException("Bindings already cleared.");
     this.target = null;
 

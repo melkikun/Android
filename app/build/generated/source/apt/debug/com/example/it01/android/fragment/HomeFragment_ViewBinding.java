@@ -12,10 +12,10 @@ import java.lang.IllegalStateException;
 import java.lang.Override;
 
 public class HomeFragment_ViewBinding implements Unbinder {
-  private HomeFragment target;
+  private HomeFragmentMenu target;
 
   @UiThread
-  public HomeFragment_ViewBinding(HomeFragment target, View source) {
+  public HomeFragment_ViewBinding(HomeFragmentMenu target, View source) {
     this.target = target;
 
     target.gridView = Utils.findRequiredViewAsType(source, R.id.grid, "field 'gridView'", GridView.class);
@@ -24,7 +24,7 @@ public class HomeFragment_ViewBinding implements Unbinder {
   @Override
   @CallSuper
   public void unbind() {
-    HomeFragment target = this.target;
+    HomeFragmentMenu target = this.target;
     if (target == null) throw new IllegalStateException("Bindings already cleared.");
     this.target = null;
 

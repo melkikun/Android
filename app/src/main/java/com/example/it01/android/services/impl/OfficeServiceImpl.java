@@ -1,13 +1,11 @@
 package com.example.it01.android.services.impl;
 
-import android.util.Log;
-
-import com.example.it01.android.activity.DetailOffice;
+import com.example.it01.android.activity.ListOffice;
 import com.example.it01.android.api.Api;
 import com.example.it01.android.api.OfficeApi;
 import com.example.it01.android.entities.Office;
 import com.example.it01.android.presenter.DetailEmployeePresenter;
-import com.example.it01.android.presenter.EmployeePresenter;
+import com.example.it01.android.presenter.ListOfficePresenter;
 import com.example.it01.android.presenter.SubmitOffice;
 import com.example.it01.android.services.OfficeService;
 
@@ -24,12 +22,12 @@ import rx.schedulers.Schedulers;
 
 public class OfficeServiceImpl implements OfficeService{
     private OfficeApi officeApi = Api.retrofit().create(OfficeApi.class);;
-    private EmployeePresenter employeePresenter;
+    private ListOfficePresenter listOfficePresenter;
     private DetailEmployeePresenter dep;
     private SubmitOffice submitOffice;
 
-    public OfficeServiceImpl(EmployeePresenter employeePresenter) {
-        this.employeePresenter = employeePresenter;
+    public OfficeServiceImpl(ListOfficePresenter listOfficePresenter) {
+        this.listOfficePresenter = listOfficePresenter;
     }
 
     public OfficeServiceImpl(DetailEmployeePresenter dep) {
@@ -86,11 +84,12 @@ public class OfficeServiceImpl implements OfficeService{
 
                     @Override
                     public void onError(Throwable e) {
+                        listOfficePresenter.fail(e.getMessage());
                     }
 
                     @Override
                     public void onNext(List<Office> offices) {
-                        employeePresenter.listOffice(offices);
+                        listOfficePresenter.success(offices);
                     }
                 });
 
