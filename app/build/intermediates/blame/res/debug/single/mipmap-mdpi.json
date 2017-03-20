@@ -1,13 +1,5 @@
 [
     {
-        "merged": "D:\\Practice\\Android\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi\\ic_launcher_round.png",
-        "source": "D:\\Practice\\Android\\android\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
-    },
-    {
-        "merged": "D:\\Practice\\Android\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi\\ic_launcher.png",
-        "source": "D:\\Practice\\Android\\android\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
-    },
-    {
         "merged": "D:\\Coding\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi\\ic_launcher_round.png",
         "source": "D:\\Coding\\android\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
     },

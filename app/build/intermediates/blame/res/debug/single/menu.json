@@ -6,13 +6,5 @@
     {
         "merged": "D:\\Coding\\android\\app\\build\\intermediates\\res\\merged\\debug\\menu\\activity_main_drawer.xml",
         "source": "D:\\Coding\\android\\app\\src\\main\\res\\menu\\activity_main_drawer.xml"
-    },
-    {
-        "merged": "D:\\Practice\\Android\\android\\app\\build\\intermediates\\res\\merged\\debug\\menu\\main.xml",
-        "source": "D:\\Practice\\Android\\android\\app\\src\\main\\res\\menu\\main.xml"
-    },
-    {
-        "merged": "D:\\Practice\\Android\\android\\app\\build\\intermediates\\res\\merged\\debug\\menu\\activity_main_drawer.xml",
-        "source": "D:\\Practice\\Android\\android\\app\\src\\main\\res\\menu\\activity_main_drawer.xml"
     }
 ]

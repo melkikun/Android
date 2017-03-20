@@ -8,11 +8,17 @@
     <include layout="@layout/toolbar" />
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="TextView"
         tools:layout_editor_absoluteX="55dp"
         tools:layout_editor_absoluteY="47dp"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/search"
+        android:hint="Search Form"
         />
     <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"

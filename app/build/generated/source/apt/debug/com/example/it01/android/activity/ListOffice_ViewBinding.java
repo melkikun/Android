@@ -6,6 +6,7 @@ import android.support.annotation.UiThread;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.EditText;
 import butterknife.Unbinder;
 import butterknife.internal.Utils;
 import com.example.it01.android.R;
@@ -26,6 +27,7 @@ public class ListOffice_ViewBinding implements Unbinder {
 
     target.toolbar = Utils.findRequiredViewAsType(source, R.id.toolbar, "field 'toolbar'", Toolbar.class);
     target.recyclerView = Utils.findRequiredViewAsType(source, R.id.rv, "field 'recyclerView'", RecyclerView.class);
+    target.search = Utils.findRequiredViewAsType(source, R.id.search, "field 'search'", EditText.class);
   }
 
   @Override
@@ -37,5 +39,6 @@ public class ListOffice_ViewBinding implements Unbinder {
 
     target.toolbar = null;
     target.recyclerView = null;
+    target.search = null;
   }
 }

@@ -35,9 +35,6 @@ public class DetailOffice extends AppCompatActivity implements DetailEmployeePre
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_office);
         ButterKnife.bind(this);
-
-
-
         setSupportActionBar(toolbar);
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDefaultDisplayHomeAsUpEnabled(true);

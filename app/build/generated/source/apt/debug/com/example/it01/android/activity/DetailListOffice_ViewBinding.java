@@ -26,6 +26,14 @@ public class DetailListOffice_ViewBinding implements Unbinder {
 
     target.id = Utils.findRequiredViewAsType(source, R.id.id, "field 'id'", TextView.class);
     target.toolbar = Utils.findRequiredViewAsType(source, R.id.toolbar, "field 'toolbar'", Toolbar.class);
+    target.city = Utils.findRequiredViewAsType(source, R.id.city, "field 'city'", TextView.class);
+    target.phone = Utils.findRequiredViewAsType(source, R.id.phone, "field 'phone'", TextView.class);
+    target.address1 = Utils.findRequiredViewAsType(source, R.id.address1, "field 'address1'", TextView.class);
+    target.address2 = Utils.findRequiredViewAsType(source, R.id.address2, "field 'address2'", TextView.class);
+    target.state = Utils.findRequiredViewAsType(source, R.id.state, "field 'state'", TextView.class);
+    target.country = Utils.findRequiredViewAsType(source, R.id.country, "field 'country'", TextView.class);
+    target.postal_code = Utils.findRequiredViewAsType(source, R.id.postal_code, "field 'postal_code'", TextView.class);
+    target.territory = Utils.findRequiredViewAsType(source, R.id.territory, "field 'territory'", TextView.class);
   }
 
   @Override
@@ -37,5 +45,13 @@ public class DetailListOffice_ViewBinding implements Unbinder {
 
     target.id = null;
     target.toolbar = null;
+    target.city = null;
+    target.phone = null;
+    target.address1 = null;
+    target.address2 = null;
+    target.state = null;
+    target.country = null;
+    target.postal_code = null;
+    target.territory = null;
   }
 }
