@@ -4,12 +4,12 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.CAMERA"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
-    <uses-feature android:name="android.hardware.camera" />
-    <uses-feature android:name="android.hardware.camera.autofocus"/>
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
 
     <application
         android:allowBackup="true"
@@ -33,7 +33,9 @@
         <activity android:name=".activity.AddOffice" />
         <activity android:name=".activity.EditOffice" />
         <activity android:name=".activity.DeleteOffice" />
-        <activity android:name=".activity.DetailListOffice"></activity>
+        <activity android:name=".activity.DetailListOffice" />
+        <activity android:name=".activity.Login" />
+        <activity android:name=".activity.ListEmployee"></activity>
     </application>
 
 </manifest>

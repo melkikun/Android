@@ -67,7 +67,7 @@ public class ListOffice extends AppCompatActivity implements ListOfficePresenter
         RecyclerView.LayoutManager  layoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
-        final ListOfficeAdapter adapter  = new ListOfficeAdapter(office);
+        ListOfficeAdapter adapter  = new ListOfficeAdapter(office);
         recyclerView.setAdapter(adapter);
         recyclerView.addOnItemTouchListener(new RecyclerTouchListener(getApplicationContext(), recyclerView, new RecyclerTouchListener.ClickListerner() {
             @Override
@@ -77,6 +77,18 @@ public class ListOffice extends AppCompatActivity implements ListOfficePresenter
                 startActivity(intent);
             }
         }));
+
+        recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
+            @Override
+            public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
+                super.onScrollStateChanged(recyclerView, newState);
+            }
+
+            @Override
+            public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
+                super.onScrolled(recyclerView, dx, dy);
+            }
+        });
 
         search.addTextChangedListener(new TextWatcher() {
             @Override

@@ -52,6 +52,8 @@
         <activity android:name="com.example.it01.android.activity.EditOffice" />
         <activity android:name="com.example.it01.android.activity.DeleteOffice" />
         <activity android:name="com.example.it01.android.activity.DetailListOffice" />
+        <activity android:name="com.example.it01.android.activity.Login" />
+        <activity android:name="com.example.it01.android.activity.ListEmployee" />
         <activity
             android:name="com.journeyapps.barcodescanner.CaptureActivity"
             android:clearTaskOnLaunch="true"

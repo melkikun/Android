@@ -4,7 +4,23 @@
         "source": "D:\\Coding\\android\\app\\src\\main\\res\\menu\\main.xml"
     },
     {
+        "merged": "D:\\Coding\\android\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_employee.xml",
+        "source": "D:\\Coding\\android\\app\\src\\main\\res\\menu\\menu_employee.xml"
+    },
+    {
         "merged": "D:\\Coding\\android\\app\\build\\intermediates\\res\\merged\\debug\\menu\\activity_main_drawer.xml",
         "source": "D:\\Coding\\android\\app\\src\\main\\res\\menu\\activity_main_drawer.xml"
+    },
+    {
+        "merged": "D:\\Coding\\android\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_customer.xml",
+        "source": "D:\\Coding\\android\\app\\src\\main\\res\\menu\\menu_customer.xml"
+    },
+    {
+        "merged": "D:\\Coding\\android\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_office.xml",
+        "source": "D:\\Coding\\android\\app\\src\\main\\res\\menu\\menu_office.xml"
+    },
+    {
+        "merged": "D:\\Coding\\android\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_product.xml",
+        "source": "D:\\Coding\\android\\app\\src\\main\\res\\menu\\menu_product.xml"
     }
 ]

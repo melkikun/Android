@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\Coding\android\app\src\main\AndroidManifest.xml:2:1-39:12
+ADDED from D:\Coding\android\app\src\main\AndroidManifest.xml:2:1-41:12
 	package
 		ADDED from D:\Coding\android\app\src\main\AndroidManifest.xml:3:5-39
 		INJECTED from D:\Coding\android\app\src\main\AndroidManifest.xml
@@ -22,30 +22,30 @@ ADDED from D:\Coding\android\app\src\main\AndroidManifest.xml:6:5-79
 	android:name
 		ADDED from D:\Coding\android\app\src\main\AndroidManifest.xml:6:22-76
 uses-permission#android.permission.CAMERA
-ADDED from D:\Coding\android\app\src\main\AndroidManifest.xml:7:5-64
+ADDED from D:\Coding\android\app\src\main\AndroidManifest.xml:7:5-65
 MERGED from [com.journeyapps:zxing-android-embedded:3.4.0] C:\Users\IT01\.android\build-cache\e77220795510b28f37ea73677fce5135ef8db2e2\output\AndroidManifest.xml:21:5-65
 	android:name
 		ADDED from D:\Coding\android\app\src\main\AndroidManifest.xml:7:22-62
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from D:\Coding\android\app\src\main\AndroidManifest.xml:8:5-80
+ADDED from D:\Coding\android\app\src\main\AndroidManifest.xml:8:5-81
 	android:name
 		ADDED from D:\Coding\android\app\src\main\AndroidManifest.xml:8:22-78
 uses-permission#android.permission.RECORD_AUDIO
-ADDED from D:\Coding\android\app\src\main\AndroidManifest.xml:9:5-70
+ADDED from D:\Coding\android\app\src\main\AndroidManifest.xml:9:5-71
 	android:name
 		ADDED from D:\Coding\android\app\src\main\AndroidManifest.xml:9:22-68
 uses-feature#android.hardware.camera
-ADDED from D:\Coding\android\app\src\main\AndroidManifest.xml:10:5-60
+ADDED from D:\Coding\android\app\src\main\AndroidManifest.xml:11:5-60
 MERGED from [com.journeyapps:zxing-android-embedded:3.4.0] C:\Users\IT01\.android\build-cache\e77220795510b28f37ea73677fce5135ef8db2e2\output\AndroidManifest.xml:24:5-26:36
 	android:name
-		ADDED from D:\Coding\android\app\src\main\AndroidManifest.xml:10:19-57
+		ADDED from D:\Coding\android\app\src\main\AndroidManifest.xml:11:19-57
 uses-feature#android.hardware.camera.autofocus
-ADDED from D:\Coding\android\app\src\main\AndroidManifest.xml:11:5-69
+ADDED from D:\Coding\android\app\src\main\AndroidManifest.xml:12:5-70
 MERGED from [com.journeyapps:zxing-android-embedded:3.4.0] C:\Users\IT01\.android\build-cache\e77220795510b28f37ea73677fce5135ef8db2e2\output\AndroidManifest.xml:32:5-34:36
 	android:name
-		ADDED from D:\Coding\android\app\src\main\AndroidManifest.xml:11:19-67
+		ADDED from D:\Coding\android\app\src\main\AndroidManifest.xml:12:19-67
 application
-ADDED from D:\Coding\android\app\src\main\AndroidManifest.xml:14:5-37:19
+ADDED from D:\Coding\android\app\src\main\AndroidManifest.xml:14:5-39:19
 MERGED from [com.android.support:design:25.2.0] C:\Users\IT01\.android\build-cache\1ae40e24756dd1f0aacbe3f34dc9d9f3e802d953\output\AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:appcompat-v7:25.2.0] C:\Users\IT01\.android\build-cache\1e33b692adbf0aeac090e384f56475edda13cf92\output\AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:animated-vector-drawable:25.2.0] C:\Users\IT01\.android\build-cache\43b9c13e9e47a96f7be90fa68fda3eb719ff022a\output\AndroidManifest.xml:22:5-20
@@ -111,9 +111,17 @@ ADDED from D:\Coding\android\app\src\main\AndroidManifest.xml:35:9-59
 	android:name
 		ADDED from D:\Coding\android\app\src\main\AndroidManifest.xml:35:19-56
 activity#com.example.it01.android.activity.DetailListOffice
-ADDED from D:\Coding\android\app\src\main\AndroidManifest.xml:36:9-72
+ADDED from D:\Coding\android\app\src\main\AndroidManifest.xml:36:9-63
 	android:name
 		ADDED from D:\Coding\android\app\src\main\AndroidManifest.xml:36:19-60
+activity#com.example.it01.android.activity.Login
+ADDED from D:\Coding\android\app\src\main\AndroidManifest.xml:37:9-52
+	android:name
+		ADDED from D:\Coding\android\app\src\main\AndroidManifest.xml:37:19-49
+activity#com.example.it01.android.activity.ListEmployee
+ADDED from D:\Coding\android\app\src\main\AndroidManifest.xml:38:9-68
+	android:name
+		ADDED from D:\Coding\android\app\src\main\AndroidManifest.xml:38:19-56
 uses-sdk
 INJECTED from D:\Coding\android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:design:25.2.0] C:\Users\IT01\.android\build-cache\1ae40e24756dd1f0aacbe3f34dc9d9f3e802d953\output\AndroidManifest.xml:21:5-23:62

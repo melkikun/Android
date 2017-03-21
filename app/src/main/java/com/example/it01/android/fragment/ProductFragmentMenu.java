@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.GridView;
@@ -29,6 +31,7 @@ public class ProductFragmentMenu extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.product_fragment_menu, container, false);
         ButterKnife.bind(this, view);
+        setHasOptionsMenu(true);
         List<String> text = new ArrayList<>();
         List<Integer> img = new ArrayList<>();
         text.add("Add");
@@ -42,5 +45,12 @@ public class ProductFragmentMenu extends Fragment {
         MenuAdapter adapter = new MenuAdapter(text, img, getContext().getApplicationContext());
         gridView.setAdapter(adapter);
         return view;
+    }
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        menu.clear();
+        inflater.inflate(R.menu.main, menu);
+        super.onCreateOptionsMenu(menu, inflater);
     }
 }

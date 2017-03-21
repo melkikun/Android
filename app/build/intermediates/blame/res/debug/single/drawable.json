@@ -12,6 +12,10 @@
         "source": "D:\\Coding\\android\\app\\src\\main\\res\\drawable\\ic_sole_propietorship.png"
     },
     {
+        "merged": "D:\\Coding\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_search.png",
+        "source": "D:\\Coding\\android\\app\\src\\main\\res\\drawable\\ic_search.png"
+    },
+    {
         "merged": "D:\\Coding\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_voice_search_api_material.xml",
         "source": "C:\\Users\\IT01\\.android\\build-cache\\1e33b692adbf0aeac090e384f56475edda13cf92\\output\\res\\drawable\\abc_ic_voice_search_api_material.xml"
     },
@@ -98,6 +102,10 @@
     {
         "merged": "D:\\Coding\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_bg.xml",
         "source": "C:\\Users\\IT01\\.android\\build-cache\\1e33b692adbf0aeac090e384f56475edda13cf92\\output\\res\\drawable\\notification_bg.xml"
+    },
+    {
+        "merged": "D:\\Coding\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_plus.png",
+        "source": "D:\\Coding\\android\\app\\src\\main\\res\\drawable\\ic_plus.png"
     },
     {
         "merged": "D:\\Coding\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_light.xml",

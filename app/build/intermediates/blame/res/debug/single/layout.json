@@ -4,6 +4,10 @@
         "source": "C:\\Users\\IT01\\.android\\build-cache\\1e33b692adbf0aeac090e384f56475edda13cf92\\output\\res\\layout\\select_dialog_item_material.xml"
     },
     {
+        "merged": "D:\\Coding\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\adapter_list_employee.xml",
+        "source": "D:\\Coding\\android\\app\\src\\main\\res\\layout\\adapter_list_employee.xml"
+    },
+    {
         "merged": "D:\\Coding\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\tab_fragment_product.xml",
         "source": "D:\\Coding\\android\\app\\src\\main\\res\\layout\\tab_fragment_product.xml"
     },
@@ -142,6 +146,10 @@
     {
         "merged": "D:\\Coding\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\tab_fragment_office.xml",
         "source": "D:\\Coding\\android\\app\\src\\main\\res\\layout\\tab_fragment_office.xml"
+    },
+    {
+        "merged": "D:\\Coding\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_login.xml",
+        "source": "D:\\Coding\\android\\app\\src\\main\\res\\layout\\activity_login.xml"
     },
     {
         "merged": "D:\\Coding\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_bottom_navigation_item.xml",
@@ -298,6 +306,10 @@
     {
         "merged": "D:\\Coding\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item_header.xml",
         "source": "C:\\Users\\IT01\\.android\\build-cache\\1ae40e24756dd1f0aacbe3f34dc9d9f3e802d953\\output\\res\\layout\\design_navigation_item_header.xml"
+    },
+    {
+        "merged": "D:\\Coding\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_list_employee.xml",
+        "source": "D:\\Coding\\android\\app\\src\\main\\res\\layout\\activity_list_employee.xml"
     },
     {
         "merged": "D:\\Coding\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_menu.xml",

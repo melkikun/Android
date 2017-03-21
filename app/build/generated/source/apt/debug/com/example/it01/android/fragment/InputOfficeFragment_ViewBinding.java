@@ -15,7 +15,7 @@ import java.lang.Override;
 public class InputOfficeFragment_ViewBinding implements Unbinder {
   private InputOfficeFragment target;
 
-  private View view2131624103;
+  private View view2131624108;
 
   @UiThread
   public InputOfficeFragment_ViewBinding(final InputOfficeFragment target, View source) {
@@ -31,7 +31,7 @@ public class InputOfficeFragment_ViewBinding implements Unbinder {
     target.postal_code = Utils.findRequiredViewAsType(source, R.id.postal_code, "field 'postal_code'", EditText.class);
     target.territory = Utils.findRequiredViewAsType(source, R.id.territory, "field 'territory'", EditText.class);
     view = Utils.findRequiredView(source, R.id.submit, "method 'submitOffice'");
-    view2131624103 = view;
+    view2131624108 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -56,7 +56,7 @@ public class InputOfficeFragment_ViewBinding implements Unbinder {
     target.postal_code = null;
     target.territory = null;
 
-    view2131624103.setOnClickListener(null);
-    view2131624103 = null;
+    view2131624108.setOnClickListener(null);
+    view2131624108 = null;
   }
 }

@@ -1,14 +1,20 @@
 package com.example.it01.android.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.GridView;
+import android.widget.Toast;
 
 import com.example.it01.android.R;
+import com.example.it01.android.activity.ListEmployee;
 import com.example.it01.android.adapter.MenuAdapter;
 
 import java.util.ArrayList;
@@ -29,6 +35,7 @@ public class EmployeeFragmentMenu extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.employee_fragment_menu, container, false);
         ButterKnife.bind(this, view);
+        setHasOptionsMenu(true);
         List<String> text = new ArrayList<>();
         List<Integer> img = new ArrayList<>();
         text.add("Add");
@@ -41,6 +48,31 @@ public class EmployeeFragmentMenu extends Fragment {
         img.add(R.drawable.ic_customer);
         MenuAdapter adapter = new MenuAdapter(text, img, getContext().getApplicationContext());
         gridView.setAdapter(adapter);
+        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                switch (i){
+                    case 0:
+                        break;
+                    case 1:
+                        break;
+                    case 2:
+                        break;
+                    case 3:
+                        startActivity(new Intent(getContext().getApplicationContext(), ListEmployee.class));
+                        break;
+                    default:
+                        Toast.makeText(getContext().getApplicationContext(), "Default Bro", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
         return view;
+    }
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        menu.clear();
+        inflater.inflate(R.menu.main, menu);
+        super.onCreateOptionsMenu(menu, inflater);
     }
 }
